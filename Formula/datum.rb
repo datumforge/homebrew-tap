@@ -5,20 +5,20 @@
 class Datum < Formula
   desc "datum is the client CLI for interacting with Datum Server"
   homepage "https://github.com/datumforge/datum"
-  version "0.3.5"
+  version "0.3.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.5/datum_0.3.5_darwin_amd64.tar.gz"
-      sha256 "507e2b438415c3fc284a5c1bac53ce66664c59f0b3196fcf6b47a9107d7a9dd4"
+      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_darwin_amd64.tar.gz"
+      sha256 "a93575712f8573ff879b63dfa18944754cf1b1a9fcc7b8336772b37fc0356204"
 
       def install
         bin.install "datum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.5/datum_0.3.5_darwin_arm64.tar.gz"
-      sha256 "963786fcdd9dcd7f3c162aa961de11e0d5bcc173f1bd1011de42abd7610647b3"
+      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_darwin_arm64.tar.gz"
+      sha256 "206d8acb5099366014b1c8a90bd14f093099ccc703f16b05a2c42d319b8cc3d5"
 
       def install
         bin.install "datum"
@@ -27,17 +27,17 @@ class Datum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.5/datum_0.3.5_linux_arm64.tar.gz"
-      sha256 "1235a5750e6c726448712da202455b6e27f50eee6421b66b09ab57e9728cd534"
+    if Hardware::CPU.intel?
+      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_linux_amd64.tar.gz"
+      sha256 "f8a5e281b9689228576b656a27bcb7c0dd84c6d254c00ab35bb80a1f8711be4e"
 
       def install
         bin.install "datum"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.5/datum_0.3.5_linux_amd64.tar.gz"
-      sha256 "3e8eef26bf1d2da8bf1198f4c116a1c34bd699431cdb8c60080c7e6323c5e31c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_linux_arm64.tar.gz"
+      sha256 "744a82cc7bcc18a8cbbf74053637389644ed7dee34e4dae37711e58e9f0d8207"
 
       def install
         bin.install "datum"
