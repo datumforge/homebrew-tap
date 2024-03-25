@@ -5,20 +5,20 @@
 class Datum < Formula
   desc "datum is the client CLI for interacting with Datum Server"
   homepage "https://github.com/datumforge/datum"
-  version "0.3.6"
+  version "0.4.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_darwin_amd64.tar.gz"
-      sha256 "a93575712f8573ff879b63dfa18944754cf1b1a9fcc7b8336772b37fc0356204"
+    if Hardware::CPU.arm?
+      url "https://github.com/datumforge/datum/releases/download/v0.4.7/datum_0.4.7_darwin_arm64.tar.gz"
+      sha256 "97c61bd029d664ee7b59b22145aab4980c51c2f4a5e12b126a31ea7131c3b6be"
 
       def install
         bin.install "datum"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_darwin_arm64.tar.gz"
-      sha256 "206d8acb5099366014b1c8a90bd14f093099ccc703f16b05a2c42d319b8cc3d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/datumforge/datum/releases/download/v0.4.7/datum_0.4.7_darwin_amd64.tar.gz"
+      sha256 "89796c783924da6754b6aa58ffe3a047757f13292f84fce19272df37a9e46701"
 
       def install
         bin.install "datum"
@@ -27,17 +27,17 @@ class Datum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_linux_amd64.tar.gz"
-      sha256 "f8a5e281b9689228576b656a27bcb7c0dd84c6d254c00ab35bb80a1f8711be4e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/datumforge/datum/releases/download/v0.4.7/datum_0.4.7_linux_arm64.tar.gz"
+      sha256 "3f3c51e6b71ccc15fdb9270c5135488962a8e4f27f1c34237fc2025a9bb73aae"
 
       def install
         bin.install "datum"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datumforge/datum/releases/download/v0.3.6/datum_0.3.6_linux_arm64.tar.gz"
-      sha256 "744a82cc7bcc18a8cbbf74053637389644ed7dee34e4dae37711e58e9f0d8207"
+    if Hardware::CPU.intel?
+      url "https://github.com/datumforge/datum/releases/download/v0.4.7/datum_0.4.7_linux_amd64.tar.gz"
+      sha256 "c46a8e4d984f8143478b1668bb09809f48a4ba5d9b4ed897f64c0ae9fcf11386"
 
       def install
         bin.install "datum"
