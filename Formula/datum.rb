@@ -5,20 +5,20 @@
 class Datum < Formula
   desc "datum is the client CLI for interacting with Datum Server"
   homepage "https://github.com/datumforge/datum"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/datumforge/datum/releases/download/v0.5.0/datum_0.5.0_darwin_amd64.tar.gz"
-      sha256 "8325b443e338e0319cc9cceecc2a3162c7ac5bd497bbd4592e2be7608f7847b4"
+      url "https://github.com/datumforge/datum/releases/download/v0.5.1/datum_0.5.1_darwin_amd64.tar.gz"
+      sha256 "7b15b92d140563d5b988b239c066b75c730a11e9c185cea7e44ee671274bdea2"
 
       def install
         bin.install "datum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/datumforge/datum/releases/download/v0.5.0/datum_0.5.0_darwin_arm64.tar.gz"
-      sha256 "d557be43487c4e9398365b22b4eb95c1c85326f18282eadeb6b847d269212f46"
+      url "https://github.com/datumforge/datum/releases/download/v0.5.1/datum_0.5.1_darwin_arm64.tar.gz"
+      sha256 "3f7251a209cdaeeb1d384b4cc89cac55360c0404f58bcf93d2ee0d34d5f5df43"
 
       def install
         bin.install "datum"
@@ -28,16 +28,16 @@ class Datum < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/datumforge/datum/releases/download/v0.5.0/datum_0.5.0_linux_amd64.tar.gz"
-      sha256 "5c7a30d1e1c4ccfe619d04fe898a43bf6b9ae783cd27c246d6ff314f041647ff"
+      url "https://github.com/datumforge/datum/releases/download/v0.5.1/datum_0.5.1_linux_amd64.tar.gz"
+      sha256 "f684c9a30ad0136fc0d35d6b0d41d3d428e2eef575785399fa780bc0bf307e77"
 
       def install
         bin.install "datum"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/datumforge/datum/releases/download/v0.5.0/datum_0.5.0_linux_arm64.tar.gz"
-      sha256 "b351f65e74afe56ea02976d244882dc755bd00b6f11d7232ca75c6ea64b37dfd"
+      url "https://github.com/datumforge/datum/releases/download/v0.5.1/datum_0.5.1_linux_arm64.tar.gz"
+      sha256 "4ad8ca53ce26bb6e2367cef3a678e267bf5ef08bc23034076799590c1345a660"
 
       def install
         bin.install "datum"
