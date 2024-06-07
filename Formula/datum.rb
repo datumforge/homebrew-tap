@@ -9,8 +9,8 @@ class Datum < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/datumforge/datum/releases/download/v0.5.4/datum_0.5.4_darwin_amd64.tar.gz"
-      sha256 "3515327e80befc868c7c9aa275b500b9bc708884e3f903ae4e6bc6c1053c7a18"
+      url "https://github.com/datumforge/datum/archive/refs/tags/v0.6.0.tar.gz"
+      sha256 "edd280e0b16a6c33328e0c254b2610347081b01b80b5a227e3a025c9f89c3beb"
 
       def install
         bin.install "datum"
