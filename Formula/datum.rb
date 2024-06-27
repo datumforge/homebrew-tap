@@ -5,21 +5,21 @@
 class Datum < Formula
   desc "datum is the client CLI for interacting with Datum Server"
   homepage "https://github.com/datumforge/datum"
-  version "0.6.8"
+  version "0.6.9"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/datumforge/datum/releases/download/v0.6.8/datum_0.6.8_darwin_amd64.tar.gz"
-      sha256 "e15b6cbefbaa18872fea16432655da4aa5382726a1d6c4caf97a316e0aa49127"
+      url "https://github.com/datumforge/datum/releases/download/v0.6.9/datum_0.6.9_darwin_amd64.tar.gz"
+      sha256 "75239da1202dd732dcd164a671998d8cadaa72c08c400c07b684be80cb54710a"
 
       def install
         bin.install "datum"
       end
     end
     on_arm do
-      url "https://github.com/datumforge/datum/releases/download/v0.6.8/datum_0.6.8_darwin_arm64.tar.gz"
-      sha256 "d926d9b5b524ef176beb05b02bd96e05039006dc1c4f3c4534dd4e70e6806e32"
+      url "https://github.com/datumforge/datum/releases/download/v0.6.9/datum_0.6.9_darwin_arm64.tar.gz"
+      sha256 "3e32dcc462ed8948686a2f17883e05493919243fc886915927bf5de41cfc55d8"
 
       def install
         bin.install "datum"
@@ -30,8 +30,8 @@ class Datum < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/datumforge/datum/releases/download/v0.6.8/datum_0.6.8_linux_amd64.tar.gz"
-        sha256 "ce21ad6aa70dee0671a7a1ce0104155c75a63ce4c64138c3fa51e31628db0d18"
+        url "https://github.com/datumforge/datum/releases/download/v0.6.9/datum_0.6.9_linux_amd64.tar.gz"
+        sha256 "d837b10dd5bc3119dc62b41bfd2962a213fb1638cdb6a5d78bad6e52fb58d1c1"
 
         def install
           bin.install "datum"
@@ -40,8 +40,8 @@ class Datum < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/datumforge/datum/releases/download/v0.6.8/datum_0.6.8_linux_arm64.tar.gz"
-        sha256 "805d5230b7276d6403774165441558983cb6e97eb2ecd5fe4efdede625e4f863"
+        url "https://github.com/datumforge/datum/releases/download/v0.6.9/datum_0.6.9_linux_arm64.tar.gz"
+        sha256 "3ffc982a9891fcddf57fccbd7858d7bbb75de4d5bb507d4f6794de0e745ea7a3"
 
         def install
           bin.install "datum"
